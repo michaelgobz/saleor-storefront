@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "saleorcoreservice-2394"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "saleorcoreservice-2394"
+  template:
+    metadata:
+      labels:
+        app: "saleorcoreservice-2394"
+    spec:
+      containers:
+        - name: "saleorcoreservice-2394"
+          image: "saleorimages.azurecr.io/saleorcoreservice"
+          ports:
+          - containerPort: 80
